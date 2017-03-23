@@ -7,13 +7,14 @@
 <!-- loads home and extends the header page //-->
 
 {% block content %}
-<p>Hey, welcome to my website I am a programmer</p>
 
 <!--Multiple html snippets in one html file//--> 
 <!--adding logic for multiple html snippets using folder 'includes' with html snippet //-->
 
 <!--this will include whatever code is inside the htmlsnippet.html file //-->
 {% include "myApp/includes/htmlsnippet.html" %}
+{% include "myApp/includes/layout.html" %}
+{% include "myApp/includes/buttons.html" %}
 
 {% endblock %}
 
