@@ -28,6 +28,7 @@ body {
 .navbar-wrapper .navbar {
   padding-right: 15px;
   padding-left: 15px;
+  background-color: blue;
 }
 .navbar-wrapper .navbar .container {
   width: auto;
@@ -100,6 +101,7 @@ body {
   /* Navbar positioning foo */
   .navbar-wrapper {
     margin-top: 20px;
+	
   }
   .navbar-wrapper .container {
     padding-right: 15px;
