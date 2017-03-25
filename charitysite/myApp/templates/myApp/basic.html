@@ -6,10 +6,24 @@
 
 
 {% block content %} <!--This will display basic information from the content key of the dictionary. content key is a list of strings  //--> 
+	<div class="container marketing">
 
-	{% for c in content %} <!-- Jinja for loop//-->
-		<p>{{c}}</p>
-	{% endfor %}
-	
+		  <!-- Three columns of text below the carousel -->
+		<div class="row">
+		  <br>
+		  <br>
+		  <br>
+		  <br>
+		  <br>
+		</div>
+		  
+
+		<div class="jumbotron">
+		
+			{% for c in content %} <!-- Jinja for loop//-->
+				<p>{{c}}</p>
+			{% endfor %}
+		</div>
+	</div>
 {% endblock %}
 

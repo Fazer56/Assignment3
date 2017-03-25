@@ -6,5 +6,5 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.appView.index, name='index'),#return file 'views' function'index'
-    url(r'^about/', views.appView.about, name='about'), 
+    url(r'^contact/', views.appView.contact, name='contact'), 
 ]
