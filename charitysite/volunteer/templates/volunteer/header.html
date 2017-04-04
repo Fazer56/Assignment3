@@ -18,7 +18,14 @@
 	<link rel='stylesheet' href="{% static 'myApp/css/theme.css' %}" type='text/css'/>
 	<link rel='stylesheet' href="{% static 'myApp/css/bootstrap-theme.min.css' %}" type='text/css'/> 
 	<link rel='stylesheet' href="{% static 'myApp/css/carousel.css' %}" type='text/css'/> 
-
+	
+	<style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+	
 </head>
 
 <body class="body" style="background-color:#ffffff">
@@ -28,7 +35,7 @@
       <div class="container">
         <nav class="navbar navbar-inverse navbar-static-top" style="backgrund-color: #0167BB">
           <div class="container">
-		 <a href="/"> <img src="{% static 'myApp/img/dove.png' %}" class="responsive-img" style='max-height:100px;' alt="face"> </a>
+		  <img src="{% static 'myApp/img/dove.png' %}" class="responsive-img" style='max-height:100px;' alt="face">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -36,14 +43,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="/">Dignity</a>
+              <a class="navbar-brand" href="#">Dignity</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav" >
                 <li class="active"><a href="/">Home</a></li>
                 <li><a href="/about/">About</a></li>
 				<li><a href="#donate">Donate</a></li>
-				<li><a href="/volunteer/">Volunteer</a></li>
+				<li><a href="#volunteer">Volunteer</a></li>
                 <li><a href="/contact/">Contact</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>

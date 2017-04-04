@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     #'About',
+    'volunteer',
     'myApp',
     'django.contrib.admin',
     'django.contrib.auth',
