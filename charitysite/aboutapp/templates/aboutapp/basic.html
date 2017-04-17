@@ -1,0 +1,33 @@
+<!--JINJA logic extends starting with templates directory. Extends personal/header template //-->
+
+<!--pages that are going to be extended will be extended all over the website //--> 
+{% extends "myApp/header.html" %} 
+
+
+
+{% block content %} <!--This will display basic information from the content key of the dictionary. content key is a list of strings  //--> 
+	<div class="container marketing">
+
+		  <!-- Three columns of text below the carousel -->
+		<div class="row">
+		  <br>
+		  <br>
+		  <br>
+		  <br>
+		  <br>
+		</div>
+		  
+
+		<div class="jumbotron">
+		
+			{% for c in content %} <!-- Jinja for loop//-->
+				<p>{{c}}</p>
+			{% endfor %}
+			
+		</div>
+		
+		
+		
+	</div>
+{% endblock %}
+

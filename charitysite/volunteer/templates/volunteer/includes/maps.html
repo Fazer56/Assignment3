@@ -6,18 +6,27 @@
 
 
 {% block content %} <!--This will display basic information from the content key of the dictionary. content key is a list of strings  //--> 
-	<div id="map"></div>
+	<div id="map" style="border: 5px solid-black; height: 400px; width: 40%"></div>
     <script>
       function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
+        var uluru = {lat: 53.3465403, lng: -6.2661446};
+		
+		var uluru2 = {lat: 53.2470773, lng: -6.11956};
+		
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
+          zoom: 10,
           center: uluru
         });
         var marker = new google.maps.Marker({
           position: uluru,
           map: map
         });
+		
+		var marker2 = new google.maps.Marker({
+          position: uluru2,
+          map: map
+        });
+		
       }
     </script>
     <script async defer

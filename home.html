@@ -1,0 +1,19 @@
+<!--JINJA logic extends starting with templates directory. Extends personal/header template //-->
+
+<!--pages that are going to be extended will be extended all over the website //--> 
+{% extends "myApp/header.html" %} 
+
+
+<!-- loads home and extends the header page //-->
+
+{% block content %}
+
+<!--Multiple html snippets in one html file//--> 
+<!--adding logic for multiple html snippets using folder 'includes' with html snippet //-->
+
+<!--this will include whatever code is inside the htmlsnippet.html file //-->
+
+{% include "myApp/includes/layout.html" %}
+		  
+{% endblock %}
+
