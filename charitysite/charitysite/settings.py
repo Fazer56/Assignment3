@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'aboutapp',
     'donate',
-    'volunteer',
+    'volunteer.apps.VolunteerConfig',
     'myApp',
     'django.contrib.admin',
     'django.contrib.auth',

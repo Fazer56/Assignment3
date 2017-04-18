@@ -3,33 +3,17 @@
 <!--pages that are going to be extended will be extended all over the website //--> 
 {% extends "volunteer/header.html" %} 
 
-
+{% load staticfiles %}
 
 {% block content %} <!--This will display basic information from the content key of the dictionary. content key is a list of strings  //--> 
-	<div class="container marketing">
-
-		  <!-- Three columns of text below the carousel -->
-		<div class="row">
-		  <br>
-		  <br>
-		  <br>
-		  <br>
-		  <br>
-		</div>
-		  
-
-		<div class="jumbotron">
+	
+	<br/>
+	<br/>
 		
-			{% for c in content %} <!-- Jinja for loop//-->
-				<p>{{c}}</p>
-			{% endfor %}
-			
-			{% include "volunteer/includes/maps.html" %}
-			
-		</div>
+	{% include "volunteer/includes/layout.html" %}
 		
 		
 		
-	</div>
+	
 {% endblock %}
 
