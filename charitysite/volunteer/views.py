@@ -1,12 +1,11 @@
 from django.shortcuts import render
-from pygeocoder import Geocoder
+from geo import GeoLoc
 import requests
 import os
 
 # Create your views here.
 class appView:
 
-    
     
     def volunteer(request):
         return render(request, 'volunteer/basic.html' , {'content':['Volunteering', 'Here is a map of all the places we will be volunteering']})
