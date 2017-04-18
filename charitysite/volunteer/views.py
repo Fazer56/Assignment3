@@ -9,18 +9,18 @@ class appView:
     
     
     def volunteer(request):
-        dude = "sahahha"
-        #return render(request, 'volunteer/basic.html' , {'content':['Volunteering', 'Here is a map of all the places we will be volunteering']})
-        return render(request, 'volunteer/basic.html' , dude)
-        return(dude)
-
+        return render(request, 'volunteer/basic.html' , {'content':['Volunteering', 'Here is a map of all the places we will be volunteering']})
+        
 
     def maploc(request):
         return render(request, 'volunteer/maps.html')
 
+   # def location(request):
 
     
-                    
+    def detail(request, member_id):
+        return HttpResponse("<h2>Details for Album id" + str(member_id) + "</h2>"  )
+        
 
 
 
