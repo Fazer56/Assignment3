@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from geo import GeoLoc
+#import geo
 import requests
 import os
 
@@ -12,6 +12,10 @@ class appView:
         
 
     def maploc(request):
+        
+
+        
+        
         return render(request, 'volunteer/maps.html')
 
    # def location(request):

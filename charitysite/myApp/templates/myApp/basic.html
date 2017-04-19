@@ -1,11 +1,46 @@
 <!--JINJA logic extends starting with templates directory. Extends personal/header template //-->
+{% extends "myApp/header.html" %} 
+
+
+{% load staticfiles %}
 
 <!--pages that are going to be extended will be extended all over the website //--> 
-{% extends "myApp/header.html" %} 
+
 
 
 
 {% block content %} <!--This will display basic information from the content key of the dictionary. content key is a list of strings  //--> 
+	 <div class="navbar-wrapper">
+	
+      <div class="container">
+        <nav class="navbar navbar-inverse navbar-static-top" style="backgrund-color: #0167BB">
+          <div class="container">
+		 <a href="/"> <img src="{% static 'myApp/img/dove.png' %}" class="responsive-img" style='max-height:100px;' alt="face"> </a>
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">Dignity</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav" >
+                <li ><a href="/">Home</a></li>
+                <li ><a href="/aboutapp">About</a></li>
+				<li><a href="#donate">Donate</a></li>
+				<li ><a href="/volunteer/">Volunteer</a></li>
+                <li class="active"><a href="/contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
 	<div class="container marketing">
 
 		  <!-- Three columns of text below the carousel -->
@@ -24,12 +59,9 @@
 				<p>{{c}}</p>
 			{% endfor %}
 			
-			{% for c in position %} <!-- Jinja for loop//-->
-				<p>{{c.lat}}  </p>
-				<p>{{c.lng}} </p>
-			{% endfor %}
-			
 		</div>
+		
+		
 		
 		
 	</div>
