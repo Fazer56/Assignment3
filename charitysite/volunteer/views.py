@@ -1,31 +1,28 @@
 from django.shortcuts import render
+from volunteer.forms import MemberForm
+from volunteer.models import Member
 #import geo
 import requests
 import os
+
+
 
 # Create your views here.
 class appView:
 
     
     def volunteer(request):
-        return render(request, 'volunteer/basic.html' , {'content':['Volunteering', 'Here is a map of all the places we will be volunteering']})
-        
-
-    def maploc(request):
-        
-
-        
-        
-        return render(request, 'volunteer/maps.html')
-
-   # def location(request):
-
-    
+        return render(request, 'volunteer/basic.html')
+            
     def detail(request, member_id):
         return HttpResponse("<h2>Details for Album id" + str(member_id) + "</h2>"  )
-        
 
+    def member(request):
+        if request.method == 'POST': #If form has been submitted
 
+            form = MemberForm(request.POST) # A form bound to the POST data
+            if form.is_valid():# check the form has all the valid fields
+                
 
     
 #response = request.get(url) #this is used for 'get requests'
