@@ -6,14 +6,3 @@ class MemberForm(forms.Form):
     surname =  forms.CharField(label='Surname', max_length=50, required = True)
     email = forms.EmailField(label='Email', max_length=100, required = True)
     address = forms.CharField(label='Address', max_length=150, required = False)
-
-    #class Meta: # to hold anything that isn't in a form field, all model attributes. tells class about ext 
-     #   model = Member # modeling from the member class
-      #  fields ='__all__'
-        
-    
-    #def __str__(self):
-     #   return self.first_name + ' - ' + self.surname
-
-
-#

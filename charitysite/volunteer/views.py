@@ -17,12 +17,8 @@ class appView:
     #def volunteer(request):
      #   return render(request, 'volunteer/basic.html')
             
-    #def detail(request, member_id):
-     #   return HttpResponse("<h2>Details for Album id" + str(member_id) + "</h2>"  )
-
+    
     def member(request):
-        #title = "My title"
-        #context = { "template_title": title, }
         if request.method == 'POST': #If form has been submitted
             form = MemberForm(request.POST) # A form bound to the POST data
             if form.is_valid():# check the form has all the valid fields
@@ -40,6 +36,8 @@ class appView:
             form = MemberForm()#error checking if form is incorrect
 
         return render(request, 'volunteer/basic.html', {'form': form})
+
+    #def getLoc
 
         
             
