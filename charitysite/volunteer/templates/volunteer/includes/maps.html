@@ -13,6 +13,14 @@
 		
 		var uluru2 = {lat: 53.2470773, lng: -6.11956};
 		
+		var uluru3 = {lat: {{ lat }} , lng: {{ lon }} };
+		
+		var uluru4 = {lat: 53.2470773, lng: -6.11956};
+		
+		var uluru5 = {lat: 53.2470773, lng: -6.11956};
+																
+		var uluru6 = {lat: 53.2470773, lng: -6.11956};
+		
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 10,
           center: uluru
@@ -26,6 +34,27 @@
           position: uluru2,
           map: map
         });
+		
+		var marker3 = new google.maps.Marker({
+          position: uluru3,
+          map: map
+        });
+		
+		var marker4 = new google.maps.Marker({
+          position: uluru4,
+          map: map
+        });
+		
+		var marker5 = new google.maps.Marker({
+          position: uluru5,
+          map: map
+        });
+		
+		var marker6 = new google.maps.Marker({
+          position: uluru6,
+          map: map
+        });
+		
 		
       }
     </script>

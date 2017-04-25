@@ -9,18 +9,18 @@ import requests
 import os
 
 
-
 # Create your views here.
 class appView:
-
-    
-    #def volunteer(request):
-     #   return render(request, 'volunteer/basic.html')
             
     
     def member(request):
+        lat = 53.3372027
+        lon = -6.2673709
+        
+        
         if request.method == 'POST': #If form has been submitted
             form = MemberForm(request.POST) # A form bound to the POST data
+            
             if form.is_valid():# check the form has all the valid fields
                 first_name = request.POST.get('first_name', '')
                 surname = request.POST.get('surname', '')
@@ -35,12 +35,10 @@ class appView:
         else: 
             form = MemberForm()#error checking if form is incorrect
 
-        return render(request, 'volunteer/basic.html', {'form': form})
-
-    #def getLoc
-
+        context = { "lat" : lat,
+        "lon" : lon, "form": form  }
         
-            
+        return render(request, 'volunteer/basic.html', context)
 
 
 

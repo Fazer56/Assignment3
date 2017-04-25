@@ -5,10 +5,14 @@ from . import views
 
 
 urlpatterns = [
-    #/volunteer/
-    #url(r'^volunteer/', views.appView.volunteer, name='volunteer'),
 
-    url(r'^volunteer/', views.appView.member, name = 'volunteer'),
+    
+
+    #url(r'^', views.appView.postLocation, name = 'postLocation'),
+
+    url(r'^', views.appView.member, name = 'member'),
+
+    
     
     #url(r'^(?P<member_id>[0-9]+)/$', views.appView.detail, name = 'detail'),
 

@@ -18,6 +18,7 @@
         <div class="col-md-7 col-md-push-5">
           <h2 class="featurette-heading">Where can I go to volunteer?</h2>
           <p class="lead"> <img src="{% static 'volunteer/img/marker.png' %}" class="responsive-img" style='height:10%; width: 10%;' alt="face">  </p>
+		  <p> {{ lat }}  {{ lon }} fuck </p>
         </div>
         <div class="col-md-5 col-md-pull-7">
           {% include "volunteer/includes/maps.html" %}
