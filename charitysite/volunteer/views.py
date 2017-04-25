@@ -14,9 +14,12 @@ class appView:
             
     
     def member(request):
+
+        geo = GeoLoc(53.3372027, -6.2673709)
         lat = 53.3372027
         lon = -6.2673709
-        
+
+        results = geo.findLoc(geo.lat, geo.lon)
         
         if request.method == 'POST': #If form has been submitted
             form = MemberForm(request.POST) # A form bound to the POST data
@@ -36,7 +39,7 @@ class appView:
             form = MemberForm()#error checking if form is incorrect
 
         context = { "lat" : lat,
-        "lon" : lon, "form": form  }
+        "lon" : lon, "form": form, "results" : results }
         
         return render(request, 'volunteer/basic.html', context)
 

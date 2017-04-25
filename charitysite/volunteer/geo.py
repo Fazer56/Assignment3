@@ -5,22 +5,18 @@ from pygeocoder import Geocoder
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
-class GeoLoc(QWidget):
-
+class GeoLoc:
+    def __init__(self, lat, lon):
+        #super(GeoLoc, self).__init__()
+        self.lat = lat
+        self.lon = lon
     
-    def __init__(self):
-        super(GeoLoc, self).__init__()
-        self.initUI()
-
-    def initUI(self):
-        self.win = QWidget()
-        self.win.resize(1500, 900)
-        self.reading()
     
     def reading(self):
         self.lon = []
         self.lat = []
         self.loc ={}
+
         
         w2 =""
         with open('templates/volunteer/includes/maps.html', 'r') as file:
@@ -42,24 +38,31 @@ class GeoLoc(QWidget):
         self.results = Geocoder.reverse_geocode(self.lat[0], self.lon[0])
         print(self.results.city)
 
-        
-        
-        self.loc = dict(zip(self.lat, self.lon))
+    def findLoc(self, lat, lon):
+        self.lat = lat
+        self.lon = lon
 
-        print(self.loc)
-                
+        self.results = Geocoder.reverse_geocode(self.lat, self.lon)
+
+        print(self.results)
             
-
+        return self.results
 
     
 
             
 def main():
     
-    app = QApplication(sys.argv)
-    appform=GeoLoc()
-    sys.exit(app.exec_())
+    geo = GeoLoc(53.3372027, -6.2673709)
 
+    print(geo.lat)
+    print(geo.lon)
+    
+    geo.findLoc(geo.lat, geo.lon)
+    
+    
+
+    
 
 if __name__ == '__main__':
     main() 
