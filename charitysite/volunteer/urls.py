@@ -10,7 +10,7 @@ urlpatterns = [
 
     #url(r'^', views.appView.postLocation, name = 'postLocation'),
 
-    url(r'^volunteer/$', views.appView.member, name = 'member'),
+    url(r'^volunteer/', views.appView.member, name = 'member'),
 
     
     

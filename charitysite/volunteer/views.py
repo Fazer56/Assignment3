@@ -33,7 +33,7 @@ class appView:
                 member_obj = Member(first_name = first_name, surname = surname, email = email, address = address)
                 member_obj.save() #the filled out fields in the form are stored into the database
 
-                return HttpResponseRedirect('volunteer/basic.html')
+                return render(request, 'volunteer/thanks.html', {'appreciation' : ['Thanks for signing up!']})
 
         else: 
             form = MemberForm()#error checking if form is incorrect

@@ -1,0 +1,31 @@
+<!--JINJA logic extends starting with templates directory. Extends personal/header template //-->
+
+<!--pages that are going to be extended will be extended all over the website //--> 
+{% extends "volunteer/header.html" %} 
+
+{% load staticfiles %}
+
+{% block content %} <!--This will display basic information from the content key of the dictionary. content key is a list of strings  //--> 
+	
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+		
+	<div style="margin-left: 40px;">	
+	{% for i in appreciation %}
+			<h2>{{i}}</h2>
+			
+		{% endfor %}
+		
+		</div>
+		
+		
+		
+	
+{% endblock %}
+
