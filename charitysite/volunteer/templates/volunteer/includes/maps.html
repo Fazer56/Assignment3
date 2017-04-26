@@ -6,23 +6,30 @@
 
 
 {% block content %} <!--This will display basic information from the content key of the dictionary. content key is a list of strings  //--> 
-	<div id="map" style="border-style: solid; border-width: 5px; height: 400px; width: 80%"></div>
+
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	
+
+	<div id="map" style="border-style: solid; border-width: 5px; height: 600px; width: 95%"></div>
     <script>
       function initMap() {
-        var uluru = {lat: 53.3465403, lng: -6.2661446};
+        var uluru = {lat: {{ lat1 }} , lng: {{ lon1 }} };
 		
-		var uluru2 = {lat: 53.2470773, lng: -6.11956};
+		var uluru2 = {lat: {{ lat2 }} , lng: {{ lon2 }} };
 		
-		var uluru3 = {lat: {{ lat }} , lng: {{ lon }} };
+		var uluru3 = {lat: {{ lat3 }} , lng: {{ lon3 }} };
 		
-		var uluru4 = {lat: 53.2470773, lng: -6.11956};
+		var uluru4 = {lat: {{ lat4 }} , lng: {{ lon4 }} };
 		
-		var uluru5 = {lat: 53.2470773, lng: -6.11956};
+		var uluru5 = {lat: {{ lat }} , lng: {{ lon }} };
 																
-		var uluru6 = {lat: 53.2470773, lng: -6.11956};
+		var uluru6 = {lat: {{ lat5 }} , lng: {{ lon5 }} };
 		
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 10,
+          zoom: 12,
           center: uluru
         });
         var marker = new google.maps.Marker({

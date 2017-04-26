@@ -17,8 +17,13 @@
       <div class="row featurette">
         <div class="col-md-7 col-md-push-5">
           <h2 class="featurette-heading">Where can I go to volunteer?</h2>
-          <p class="lead"> <img src="{% static 'volunteer/img/marker.png' %}" class="responsive-img" style='height:10%; width: 10%;' alt="face">  </p>
-		  <p> {{ results }} </p>
+		  
+		  {% for r in locations %}
+		  
+          <p class="lead"> <img src="{% static 'volunteer/img/marker.png' %}" class="responsive-img" style='height:5%; width: 5%;' alt="face">  </p>
+		  <p> Meet up Address: {{r}}</p>
+		  {% endfor %}
+
         </div>
         <div class="col-md-5 col-md-pull-7">
           {% include "volunteer/includes/maps.html" %}
